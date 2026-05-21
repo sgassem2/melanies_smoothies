@@ -1,8 +1,8 @@
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
+#from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col, when_matched
-
-session = get_active_session()
+cnx = st.connection("snowflake")
+session = cnx.session()
 
 st.title(":cup_with_straw: :balloon: Smoothie Order App")
 
